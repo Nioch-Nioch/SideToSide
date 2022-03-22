@@ -33,7 +33,10 @@ function App() {
  
   return ( 
     <div className = "App" >
-      {isVisable && <div className='bg__single'><img key={ isVisable.id } className="single" src={isVisable.download_url} alt="photo"/><button onClick={()=> setIsVisable(null)} className="button">X</button></div>}
+      {isVisable && 
+        <div className='bg__single' onClick={()=> setIsVisable(null)}>
+          <img key={ isVisable.id } className="single" src={isVisable.download_url} alt="photo"/>
+        </div>}
       <div className="list">
         {console.log(list)}
             {visableImg && visableImg.map(item => (
